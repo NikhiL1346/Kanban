@@ -1,0 +1,57 @@
+/* .dropdown {
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    /* min-height: 40px;
+    min-width: 80px; */
+    /* width: fit-content;
+    height: fit-content;
+     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.14); */
+    /* max-width: 250px;
+    max-height: 390px; */
+    /* overflow-y: auto;
+    padding: 20px;
+    width: 150px ;
+    z-index: 5;
+  } */ 
+  /* .board_dropdown2 {
+    position:absolute;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.14);
+    padding: 20px;
+    width: 150px ;
+    cursor: default;
+  } */
+
+  .dropdown {
+    position: absolute; /* Keep it absolute for placement */
+    right: 0; /* Align to the right of the parent */
+    top: 100%; /* Position below the triggering element */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); /* Softer shadow for better visibility */
+    padding: 15px; /* Consistent padding */
+    width: 150px; /* Fixed width */
+    z-index: 5; /* Make sure it appears above other elements */
+    transition: all 0.2s ease; /* Smooth transition for any changes */
+    overflow-y: auto; /* Enable scrolling if needed */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.dropdown p:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Optional: Style for the items inside the dropdown */
+.dropdown p {
+    padding: 10px; /* Space around text */
+    border-radius: 5px; /* Rounded edges for items */
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+/* Additional styles for the dropdown items */
+.dropdown p:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0; /* Add a separator between items */
+}

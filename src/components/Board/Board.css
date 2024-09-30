@@ -1,0 +1,130 @@
+.board {
+    min-width: 290px;
+    width: 290px;
+    max-height: 100%;
+    flex-basis: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.board:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    /* transform: scale(1.05);  */
+}
+
+  
+.board_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .board_header_title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #333;
+  }
+  
+  .board_header_title span {
+    color: rgb(145, 145, 145);
+  }
+  
+  .board_header_title_more {
+    cursor: pointer;
+    position: relative;
+    opacity: 0; /* Set initial opacity */
+    transition: opacity 200ms ease, color 200ms ease; /* Include opacity in the transition */
+}
+
+.board_header_title_more:hover {
+    opacity: 1; /* Full opacity on hover */
+    /* Change color on hover */
+}
+
+  
+  .board_dropdown p {
+    border-bottom: 1px solid #f8f8f8;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+  
+  .board_cards {
+    background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .board_add-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+  }
+  
+  .board_add-card:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Edit card input style */
+  .board_add-card_edit {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 200ms ease;
+  }
+  
+  .board_add-card_edit:focus-within {
+    box-shadow: 0 2px 8px rgba(0, 121, 191, 0.25);
+  }
+  
+/* Styles for the board title's Editable component */
+.editable-board-title {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Text color */
+}
+
+/* Style the input field inside Editable when it's in edit mode */
+.editable-board-title input {
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Keep text bold */
+  border: 1px solid #ccc; /* Add a border */
+  width: 100%; /* Make it take full width */
+  padding: 5px; /* Add some padding */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* You can also add hover or focus effects */
+.editable-board-title input:hover {
+  border-color: #888; /* Change border color on hover */
+}
+
+.editable-board-title input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}

@@ -1,0 +1,99 @@
+/* Container for the editable component */
+.editable {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Display mode of the editable field */
+.editable_display {
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.editable_display:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Edit mode for the editable component */
+.editable_edit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Input field for editing */
+.editable_edit input {
+  border: 2px solid #0079bf;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 2px 4px rgba(0, 121, 191, 0.15);
+}
+
+.editable_edit input:focus {
+  border-color: #046daa;
+  box-shadow: 0 4px 8px rgba(0, 121, 191, 0.25);
+}
+
+/* Footer section for the edit mode */
+.editable_edit_footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Buttons in the footer */
+.editable_edit_footer button {
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  background-color: #0079bf;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  transition: background-color 150ms ease, transform 100ms ease;
+}
+
+.editable_edit_footer button:hover {
+  background-color: #046daa;
+}
+
+.editable_edit_footer button:active {
+  transform: translateY(2px);
+  background-color: #005a8b;
+}
+
+/* Close icon in the footer */
+.editable_edit_footer .closeIcon {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  fill: #333;
+  transition: fill 200ms ease;
+}
+
+.editable_edit_footer .closeIcon:hover {
+  fill: #0079bf;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .editable_display {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .editable_edit_footer button {
+    padding: 8px 10px;
+  }
+}

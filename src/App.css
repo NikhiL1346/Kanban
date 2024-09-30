@@ -1,0 +1,100 @@
+/* Custom Scrollbar Styles */
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  border: 1px solid gray;
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif; /* Set a default font */
+}
+
+/* Navigation Bar */
+.app_nav {
+  padding: 30px;
+  box-shadow: 0 1px 20px rgba(56, 40, 40, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: #ffffff; /* Consistent background color */
+  z-index: 10; /* Ensure it stays on top */
+}
+
+/* Boards Container */
+.app_boards_container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  padding-top: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Boards Section */
+.app_boards {
+  height: 100%;
+  width: fit-content;
+  padding: 10px 30px;
+  display: flex;
+  gap: 30px;
+}
+
+/* Last Board Section */
+.app_boards_last {
+  flex-basis: 290px;
+  min-width: 290px;
+}
+
+/* Add Board Button */
+.app_boards_add-board {
+  background-color: #ffffff;
+  color: #333; /* Darker text for better readability */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  width: 100%;
+  text-align: center;
+  padding: 15px; /* More padding for better click area */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+.app_boards_add-board:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+/* Add Board Edit Button */
+.app_boards_add-board_edit {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: border 0.3s; /* Smooth border change */
+}
+
+.app_boards_add-board_edit:focus {
+  border: 2px solid #0079bf; /* Highlight on focus */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app_boards {
+      flex-direction: column; /* Stack boards on smaller screens */
+      padding: 10px; /* Reduce padding */
+  }
+  
+  .app_boards_last {
+      min-width: 100%; /* Full width for smaller screens */
+  }
+}

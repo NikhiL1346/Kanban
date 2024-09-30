@@ -1,0 +1,147 @@
+.cardinfo {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 550px;
+  max-width: 650px;
+  background-color: #f9f9f9; /* Soft background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.cardinfo_box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #e0e0e0; /* Light border */
+  padding: 15px; /* Inner padding */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background for boxes */
+}
+
+.cardinfo_box_title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cardinfo_box_title p {
+  font-weight: bold;
+  font-size: 1.5rem; 
+  color: #333; /* Darker color for titles */
+}
+
+.cardinfo_box_title svg {
+  height: 20px; /* Slightly larger icons */
+  width: 20px;
+  
+}
+
+.cardinfo_box_labels {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cardinfo_box_labels label {
+  border-radius: 20px; /* More rounded labels */
+  background-color: #0079bf; /* Colorful background */
+  color: #fff;
+  padding: 6px 12px; /* More padding for a better look */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem; /* Slightly smaller font */
+}
+
+.cardinfo_box_labels label svg {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.cardinfo_box ul {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.cardinfo_box ul li {
+  list-style: none;
+  width: 24px; /* Slightly larger circles */
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #eee; /* Light background for unselected */
+  transition: background-color 0.2s; /* Smooth transition */
+}
+
+.cardinfo_box ul li:hover {
+  background-color: #ddd; /* Highlight on hover */
+}
+
+.cardinfo_box ul .li_active {
+  box-shadow: 0 0 0 3px #ffd700; /* Bright yellow outline for active */
+  background-color: #ffd700; /* Active background color */
+}
+
+.cardinfo_box_progress-bar {
+  width: 100%;
+  border-radius: 30px;
+  height: 10px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2; /* Light gray background for progress bar */
+}
+
+.cardinfo_box_progress {
+  height: 100%;
+  border-radius: 30px;
+  background-color: #0079bf; /* Color for progress */
+  width: 0;
+  transition: width 0.2s; /* Smooth width transition */
+}
+
+.cardinfo_box_task_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cardinfo_box_task_checkbox {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  gap: 15px;
+}
+
+.cardinfo_box_task_checkbox input,
+.cardinfo_box_task_checkbox svg {
+  height: 20px;
+  width: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cardinfo_box_task_checkbox p {
+  flex: 1;
+  line-height: 20px; /* Align text with checkbox */
+  color: #555; /* Softer color for task text */
+}
+
+.cardinfo_box_task_checkbox .completed {
+  text-decoration: line-through; /* Cross out completed tasks */
+  color: #aaa; /* Lighter color for completed text */
+}
+
+.cardinfo_box input[type="date"] {
+  border: 2px solid #0079bf; /* Colorful border */
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+  transition: border-color 0.2s; /* Smooth border transition */
+}
+
+.cardinfo_box input[type="date"]:focus {
+  border-color: #005a8d; /* Darker border on focus */
+}

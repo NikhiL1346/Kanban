@@ -1,0 +1,102 @@
+.card {
+  padding: 15px; /* Increased padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for clearer separation */
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 10px; /* Soft rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slight scaling on hover for emphasis */
+}
+
+.card_top {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card_top_labels {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.card_top_labels label {
+  border-radius: 20px; /* More rounded labels */
+  padding: 6px 14px; /* Increased padding for comfort */
+  background-color: #0079bf; /* Colorful background */
+  color: #ffffff; /* White text */
+  font-size: 0.9rem; /* Slightly smaller font for labels */
+  transition: background-color 0.2s; /* Smooth background transition */
+}
+
+.card_top_labels label:hover {
+  background-color: #005a8d; /* Darker shade on hover */
+}
+
+.card_top_more {
+  width: 30px;
+  height: 20px;
+  transform: translateX(15px);
+  flex: 1;
+  cursor: pointer;
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.2s; /* Smooth opacity transition */
+}
+
+.card:hover .card_top_more {
+  opacity: 1; /* Show on hover */
+}
+
+.card_title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.1rem; /* Slightly larger title font */
+  line-height: 1.875rem;
+  color: #333; /* Darker color for better visibility */
+}
+
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_footer_item {
+  border-radius: 20px; /* More rounded corners */
+  padding: 6px 14px; /* Increased padding for better touch area */
+  background-color: #f0f0f0; /* Soft light gray background */
+  color: #000; /* Black text */
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  transition: background-color 0.2s; /* Smooth background transition */
+}
+
+.card_footer_item:hover {
+  background-color: #e0e0e0; /* Darker shade on hover */
+}
+
+.card_footer_icon {
+  height: 15px; /* Slightly larger icons for better visibility */
+  width: 15px;
+}
+
+.card_footer_user {
+  border-radius: 50%; /* Keep circular shape */
+  height: 30px; /* Slightly larger for visibility */
+  width: 30px;
+  background-color: #f8f8f8; /* Light background for user */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
